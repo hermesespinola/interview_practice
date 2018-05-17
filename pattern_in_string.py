@@ -22,33 +22,33 @@ def find_all(a_str, sub):
 
 def patternMatches(pattern, string):
     simbol_count = {}
-    for simbol in pattern:
-        simbol_count[simbol] = simbol_count.get(simbol, 0) + 1
+    for symbol in pattern:
+        simbol_count[symbol] = simbol_count.get(symbol, 0) + 1
     print (simbol_count)
 
     def helper(pattern, string):
 
-        # Resolve first simbol in pattern
-        simbol = pattern[0]
+        # Resolve first symbol in pattern
+        symbol = pattern[0]
         sub_end = 1
         sub = string[:sub_end]
         start_idxs = find_all(string, sub)
 
-        # increment the substring of the simbol
-        while len(start_idxs) > simbol_count[simbol]:
+        # increment the substring of the symbol
+        while len(start_idxs) > simbol_count[symbol]:
             sub_range[1] += 1
             sub = string[:sub_end]
             start_idxs = find_all(string, sub)
 
         # Impossible to have less substrings than simbols in pattern
-        if len(start_idxs) < simbol_count[simbol]:
+        if len(start_idxs) < simbol_count[symbol]:
             return False
 
-        # len(start_idxs) == simbol_count[simbol]
-        # Maybe a pattern, check recursively for the next simbol
+        # len(start_idxs) == simbol_count[symbol]
+        # Maybe a pattern, check recursively for the next symbol
         new_string = '|'.join(string.split(sub))
-        new_pattern = '|'.join(pattern.split(simbol))
-        simbol_count.pop(simbol)
+        new_pattern = '|'.join(pattern.split(symbol))
+        simbol_count.pop(symbol)
         return helper(new_pattern, new_string)
 
     return helper(pattern, string)
