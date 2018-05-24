@@ -12,7 +12,8 @@ def removeKFromList(l, k):
             current = current.next
     return l.next if l and l.next.value == k else l
 
-removed = removeKFromList(ListNode(3, ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5)))))), 3)
+l = ListNode(3, ListNode(1, ListNode(2, ListNode(3, ListNode(4, ListNode(5))))))
+removed = removeKFromList(l, 3)
 while removed != None:
     print removed.value,
     removed = removed.next
