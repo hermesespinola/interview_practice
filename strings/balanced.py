@@ -1,8 +1,8 @@
-def is_valanced(text):
+def is_balanced(text):
     val = sum([1 if c == '(' else -1 if c == ')' else 0 for c in text])
     return val == 0
 
-def is_valanced2(text):
+def is_balanced2(text):
     stack = []
     for c in text:
         if c == '(':
@@ -36,5 +36,5 @@ if __name__ == '__main__':
     print(reverse('hola(123)')) # hola321 -> 123aloh
     print(reverse('h(ola)')) # halo -> olah
     print(reverse('(ho)(la)')) # ohal -> laho
-    print(reverse('(ho(la) (pinche)) (pu(tit)a)')) # (hoal ehcnip) (putita) -> pinche laoh atitup -> putita hoal ehcnip
-    print(reverse('(hola) (pinche) (putita)')) # aloh ehcnip atitup -> putita pinche hola
+    print(reverse('(ho(la) (querido)) (am(ig)o)')) # (hoal odireuq) (amigo) -> querido laoh ogima -> amigo hoal odireuq
+    print(reverse('(hola) (querido) (amigo)')) # aloh odireuq ogima -> amigo querido hola
