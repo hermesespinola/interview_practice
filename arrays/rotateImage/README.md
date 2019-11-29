@@ -1,3 +1,5 @@
+# Rotate Image
+
 > Note: Try to solve this task in-place (with O(1) additional memory), since this is what you'll be asked to do during an interview.
 
 You are given an n x n 2D matrix that represents an image. Rotate the image by 90 degrees (clockwise).
@@ -6,7 +8,7 @@ You are given an n x n 2D matrix that represents an image. Rotate the image by 9
 
 For
 
-```
+```python
 a = [[1, 2, 3],
      [4, 5, 6],
      [7, 8, 9]]
@@ -14,7 +16,7 @@ a = [[1, 2, 3],
 
 the output should be
 
-```
+```python
 rotateImage(a) =
 [[7, 4, 1],
  [8, 5, 2],
@@ -27,7 +29,8 @@ rotateImage(a) =
 
 - **[input]** array.array.integer a
 
->Guaranteed constraints:
+## Guaranteed constraints:
+
 - 1 ≤ a.length ≤ 100,
 - a[i].length = a.length,
 - 1 ≤ a[i][j] ≤ 104.

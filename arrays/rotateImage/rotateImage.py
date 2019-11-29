@@ -1,12 +1,12 @@
 def rotateImage(a):
     n = len(a)
 
-    for i in xrange(n / 2): # each section
-        for j in xrange(i, n - i - 1): # count all
+    for i in range(n / 2): # each section
+        for j in range(i, n - i - 1): # count all
             row, col = i, j
             # store the element being replaced
             tmp = a[i][j]
-            for _ in xrange(4):
+            for _ in range(4):
                 # calculate the 90 deg rotation
                 row, col = col, n - row - 1
                 # swap tmp and next element
