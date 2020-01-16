@@ -1,5 +1,5 @@
 def firstDuplicate(a):
-    for i in xrange(len(a)):
+    for i in range(len(a)):
         if a[abs(a[i]) - 1] > 0:
             a[abs(a[i]) - 1] *= -1
         else:
